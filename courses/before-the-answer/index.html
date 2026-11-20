@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#09121c"><meta name="color-scheme" content="dark">
+<meta name="description" content="Six narrated experiments on verbalizable representations in language models. Explore measured layer readouts, concept swaps and reflection training in English and Mandarin.">
+<title>Before the Answer · One Hundred Thousand Whys</title>
+<link rel="stylesheet" href="src/course.css">
+</head>
+<body>
+<a id="skip" class="skip" href="#lesson">Skip to the lesson</a>
+<header class="top"><div class="wrap top-inner">
+<a id="homeLink" class="brand" href="#home"><span class="mark" aria-hidden="true">◈</span><span><span id="brandName">One Hundred Thousand Whys</span><small id="collectionLabel">INTERACTIVE COURSES</small></span></a>
+<nav id="topNav" aria-label="Course navigation"><a id="navChapters" href="#chapters">Chapters</a><a id="navLab" href="#lesson">Workbench</a></nav>
+<div id="langOptions" class="seg lang" aria-label="Language"><button type="button" id="en" lang="en" aria-pressed="true">EN</button><button type="button" id="zh" lang="zh-CN" aria-pressed="false">中文</button></div>
+</div></header>
+<main id="home">
+<section class="hero" aria-labelledby="title"><img src="assets/hero.webp" alt="" class="hero-art" width="1700" height="820" fetchpriority="high"><div class="wrap hero-inner">
+<div class="eyebrow" id="discipline">Model interpretability</div><h1 id="title">Before the <em>Answer</em></h1>
+<a id="paperTitle" class="paper-title" href="https://transformer-circuits.pub/2026/workspace/index.html" target="_blank" rel="noreferrer">Verbalizable Representations Form a Global Workspace in Language Models</a>
+<p id="intro">A model answers “8.” It never says spider. What happens if researchers replace that hidden concept with ant?</p>
+<div class="hero-actions"><button id="startFilm" class="btn primary"><span aria-hidden="true">▶</span> <span>Play chapter one</span></button><button id="startLab" class="btn ghost"><span aria-hidden="true">⌁</span> <span>Try the experiment</span></button></div>
+</div></section>
+<section id="chapters" class="catalog"><div class="wrap"><div class="section-line"><h2 id="chapterHeading">Course chapters</h2><span id="length" class="meta"></span></div><div id="rail" class="rail" aria-label="Chapters"></div></div></section>
+<section id="lesson" class="wrap lesson" aria-labelledby="chapterTitle">
+<div class="lesson-head"><div><div id="chapterNumber" class="eyebrow amber"></div><h2 id="chapterTitle"></h2><p id="chapterQuestion" class="question"></p></div><div class="seg modes"><button id="labMode" type="button" aria-pressed="true">Experiment</button><button id="filmMode" type="button" aria-pressed="false">Narrated film</button></div></div>
+<div id="lab" class="stage"><div id="labBody"></div></div>
+<div id="film" class="stage" hidden><video id="movie" playsinline controls preload="none"></video><div class="film-settings"><span class="meta" id="filmInfo"></span><div><label><span id="capLabel">Captions</span> <select id="captions"><option value="single">Current language</option><option value="both">English + 中文</option><option value="off">Off</option></select></label><label><span id="rateLabel">Speed</span> <select id="speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label></div></div><p id="movieError" class="error" role="status" hidden></p></div>
+<div class="notes"><article class="takeaway"><div class="eyebrow" id="takeLabel"></div><h3 id="takeTitle"></h3><p id="takeText"></p><div id="refs" class="refs"></div></article>
+<div class="detail-stack"><details id="technical"><summary id="techLabel">Method notes</summary><div id="techBody" class="detail-body"></div></details><details id="transcript"><summary id="transLabel">Chapter transcript</summary><div class="detail-body"><p id="transHelp"></p><ol id="cues"></ol></div></details></div></div>
+<div class="next-row"><button id="prev" class="btn ghost">Previous chapter</button><span class="meta" id="pageCount"></span><button id="next" class="btn ghost">Next chapter</button></div>
+</section></main>
+<footer><div class="wrap footer-inner"><div><span id="footerTitle">Before the Answer</span><small id="credit"></small></div><div><a id="catalogLink" href="https://buyangnie.github.io/One-Hundred-Thousand-Whys/">Course catalog</a><a id="download" href="https://github.com/buyangnie/One-Hundred-Thousand-Whys/releases/download/before-the-answer-v1.0.0/Before_the_Answer.html">Offline edition</a></div></div></footer>
+<p id="loadError" class="error" role="alert" hidden></p><noscript><p>This interactive lesson requires JavaScript. 本课件需要启用 JavaScript。</p></noscript>
+<script src="src/labs.js"></script><script src="src/app.js"></script>
+</body></html>

@@ -1,0 +1,22 @@
+{
+  "id": "before-the-answer",
+  "version": "1.0.0",
+  "defaultLanguage": "en",
+  "languages": ["en", "zh"],
+  "title": {"en":"Before the Answer","zh":"答案出现之前"},
+  "description": {"en":"Exchange a spider for an ant inside a language model. Six narrated experiments trace the evidence for a global workspace in Claude.","zh":"把模型内部的蜘蛛换成蚂蚁。六个有声实验带你追踪 Claude 语言模型中全局工作空间的证据。"},
+  "subjects": ["Artificial Intelligence", "Computer Science"],
+  "tags": ["Jacobian lens","J-lens","J-space","mechanistic interpretability","Anthropic","global workspace","Claude","Transformer","Verbalizable Representations Form a Global Workspace in Language Models","全局工作空间","机制可解释性","可言说表征","语言模型","残差流","反事实反思训练"],
+  "cover": "cover.webp",
+  "entry": "index.html",
+  "release": "https://github.com/buyangnie/One-Hundred-Thousand-Whys/releases/download/before-the-answer-v1.0.0/Before_the_Answer.html",
+  "filmArchive": "Before_the_Answer_films.zip",
+  "chapters": [
+    {"id":"unspoken-spider","title":{"en":"The unspoken spider","zh":"没说出口的蜘蛛"},"question":{"en":"Can an unspoken concept change an answer?","zh":"没说出口的概念，能改变答案吗？"}},
+    {"id":"jacobian-lens","title":{"en":"Reading a layer","zh":"读出一层向量"},"question":{"en":"What does a lens read inside a transformer?","zh":"怎样从 Transformer 的一层向量中读出词元？"}},
+    {"id":"arithmetic","title":{"en":"Three silent steps","zh":"三步无声的计算"},"question":{"en":"When do 21, 42 and 49 become visible?","zh":"21、42 和 49 分别在什么时候出现？"}},
+    {"id":"broadcast","title":{"en":"One signal, many uses","zh":"一个表征，多种用途"},"question":{"en":"Can different tasks read the same country representation?","zh":"不同任务能读取同一个国家表征吗？"}},
+    {"id":"selectivity","title":{"en":"Which tasks change?","zh":"哪些任务会改变？"},"question":{"en":"Can a model call a passage French and still continue it in Spanish?","zh":"模型会一边说这是法语，一边仍用西班牙语续写吗？"}},
+    {"id":"reflection","title":{"en":"Training a reflection","zh":"训练一次反思"},"question":{"en":"Can training a model to explain a principle change its unprompted behavior?","zh":"教模型在被追问时解释原则，会改变它平时的行为吗？"}}
+  ]
+}

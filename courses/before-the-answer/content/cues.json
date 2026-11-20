@@ -1,0 +1,786 @@
+{
+  "en": [
+    {
+      "duration": 93.419,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 6.817,
+          "text": "How many legs does the animal that spins a web have? You probably pictured the animal before you counted its legs."
+        },
+        {
+          "sceneIndex": 0,
+          "start": 7.197,
+          "end": 13.505,
+          "text": "The model's leading answer is eight. The question never names a spider, and the answer gives us just a number."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 14.305,
+          "end": 23.754,
+          "text": "Pause before that answer. Researchers examined the numerical activity at several positions inside the model. In the middle layers, a lens picked out the word spider."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 24.134,
+          "end": 33.305,
+          "text": "That is an intriguing clue. The model could represent a spider while another route, perhaps an association between webs and eight, supplies the answer."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 34.105,
+          "end": 41.43,
+          "text": "How could you tell those possibilities apart? Keep every word of the question fixed. Change only what happens inside the model."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 41.81,
+          "end": 51.71,
+          "text": "At selected layers, exchange the activation coordinates associated with spider and ant. Then let the remaining computation run. Which number will lead?"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 52.51,
+          "end": 61.836,
+          "text": "Reveal the two runs. With the original internal state, eight leads. After the swap, six leads. Six is the number of legs on an ant."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 62.216,
+          "end": 71.768,
+          "text": "Something changed between recognizing the animal and producing the number. Because the input stayed fixed, we can connect that change to the internal intervention."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 72.568,
+          "end": 82.483,
+          "text": "Read the example twice. First ask which concept the lens picked up. Then ask whether changing that concept altered the answer in the predicted direction."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 82.863,
+          "end": 92.879,
+          "text": "Together those observations support a causal role for this representation in this example. Keep those two questions in mind as we move from one animal to a shared workspace."
+        }
+      ]
+    },
+    {
+      "duration": 95.215,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 9.54,
+          "text": "Choose one token in a prompt. At that position the model carries a long list of numbers, a vector. Each transformer layer reads and updates it."
+        },
+        {
+          "sceneIndex": 0,
+          "start": 9.92,
+          "end": 19.509,
+          "text": "The evolving vector is called the residual stream. If we could translate one layer's vector into vocabulary terms, its contents would be easier to inspect."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 20.309,
+          "end": 27.941,
+          "text": "A tool called the logit lens tries the model's own output readout directly on that vector. It often works well near the output."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 28.321,
+          "end": 36.117,
+          "text": "Earlier in the network, a direction can have a different meaning. Reading it as though it were already at the final layer can obscure a concept."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 36.917,
+          "end": 45.67,
+          "text": "The Jacobian lens adds a translation step. Imagine nudging a component of the vector and measuring the resulting small changes at the final layer."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 46.05,
+          "end": 56.667,
+          "text": "Those local sensitivities form a matrix. The authors average across many prompts and positions, including later positions, to estimate a typical mapping for each layer."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 57.467,
+          "end": 66.027,
+          "text": "Apply the mapping and read out the vocabulary scores. A high rank identifies a token that this activation tends to favor across contexts."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 66.407,
+          "end": 74.774,
+          "text": "Change the layer while keeping the token position fixed. The rankings let you follow a candidate concept as the representation changes across depth."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 75.574,
+          "end": 85.199,
+          "text": "The researchers call a sparse combination of these token directions the J-space component. They fit only a few directions at a time, each with a nonnegative weight."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 85.579,
+          "end": 94.675,
+          "text": "Much of the vector remains outside that fit. In particular, a concept expressed by several tokens can be difficult for the basic lens to recover."
+        }
+      ]
+    },
+    {
+      "duration": 95.673,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 10.621,
+          "text": "Try this calculation. Add four and seventeen, double the sum, and then add seven. You may already have an answer. Hold on to the two intermediate numbers."
+        },
+        {
+          "sceneIndex": 0,
+          "start": 11.001,
+          "end": 19.916,
+          "text": "In this experiment, the model only has to complete the expression. We will watch its hidden state at the equals sign, before the next token appears."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 20.716,
+          "end": 28.575,
+          "text": "Start with twenty-one, the sum inside the parentheses. Move through the layers, and watch its rank among the tokens identified by the lens."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 28.955,
+          "end": 38.204,
+          "text": "At the beginning, none of the three quantities is prominent. Further in, their ranks rise together for a while, and twenty-one reaches first place earliest."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 39.004,
+          "end": 47.262,
+          "text": "Now follow forty-two. This number is available if you double the sum. It reaches first place roughly eight layers after twenty-one does."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 47.642,
+          "end": 55.116,
+          "text": "You can pin a different number without changing the expression. Look at how the lines cross, and check their ranks at the very same layer."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 55.916,
+          "end": 65.547,
+          "text": "Finally, add seven to forty-two. Forty-nine reaches first place only near the model's output. Notice how far we traveled while staying at one token position."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 65.927,
+          "end": 74.423,
+          "text": "All these ranks come from a single forward pass. The model can process intermediate quantities before it writes even the first digit of its answer."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 75.223,
+          "end": 85.987,
+          "text": "A sequence of peaks is suggestive. The authors also tested which layers mattered by substituting internal activations from another run, a method called activation patching."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 86.367,
+          "end": 95.133,
+          "text": "That separate test supported the same ordering for this calculation. Try reading a point on the chart aloud as a rank, a layer, and a token position."
+        }
+      ]
+    },
+    {
+      "duration": 98.547,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 10.775,
+          "text": "A spider representation helped one question. To earn the name workspace, a representation should also be available to several different operations. How would you test that?"
+        },
+        {
+          "sceneIndex": 0,
+          "start": 11.155,
+          "end": 20.541,
+          "text": "Use a country as a common input. A question can ask for its capital, its main language, or its continent. Each question calls for a different fact."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 21.341,
+          "end": 29.546,
+          "text": "Start with questions about France. Replace the workspace coordinates for France with those for China. Keep the same change for every question."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 29.926,
+          "end": 39.099,
+          "text": "The capital answer changes from Paris to Beijing. The language and continent answers switch too. The wording still asks about France in every case."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 39.899,
+          "end": 51.015,
+          "text": "To find out how often this works, the paper tests countries, months, animals, and number words. Each category has four operations and twelve ordered swaps per operation."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 51.395,
+          "end": 59.667,
+          "text": "That makes one hundred ninety-two trials. A trial succeeds when the answer appropriate to the new input moves all the way to first place."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 60.467,
+          "end": 69.975,
+          "text": "With the standard intervention, seventy-six trials succeed. With a swap of twice the strength, one hundred and one succeed out of the same one hundred ninety-two."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 70.355,
+          "end": 79.247,
+          "text": "Strength changes the size of the subtraction and addition along the chosen directions. It does not change the question, or what counts as success."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 80.047,
+          "end": 88.325,
+          "text": "Look at the unsuccessful trials as well. A swap tended to work better when the original concept was already strongly present in the readout."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 88.705,
+          "end": 98.007,
+          "text": "The evidence for broadcast is that several different computations can use the same change. The incomplete success rate tells us how far that claim extends."
+        }
+      ]
+    },
+    {
+      "duration": 98.288,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 9.337,
+          "text": "Imagine reading a Spanish passage. You know its language, but do you need to name the language to keep reading? The researchers pose four different tasks."
+        },
+        {
+          "sceneIndex": 0,
+          "start": 9.717,
+          "end": 20.804,
+          "text": "The lens picks up Spanish in every task. Across the question tokens, the experiment swaps the workspace coordinates for Spanish and French. Predict which answers will change."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 21.604,
+          "end": 30.044,
+          "text": "First ask the model to name the language of the passage. In the unmodified run it names Spanish. After the swap it names French."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 30.424,
+          "end": 38.44,
+          "text": "Here the task asks for the very property that researchers changed inside the model. Naming the language is a direct test of verbal report."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 39.24,
+          "end": 48.112,
+          "text": "Now ask for a famous writer in the passage's language. The original response names García Márquez. With the swap, the model names Victor Hugo."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 48.492,
+          "end": 56.793,
+          "text": "The passage gives no author's name. To retrieve a writer, the model can use its inference about the language as the input to a second operation."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 57.593,
+          "end": 67.58,
+          "text": "Next ask for the next line. After exactly the same intervention, the model continues writing in Spanish. Its fluent continuation survives the swap."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 67.96,
+          "end": 76.505,
+          "text": "For the fourth task, a French sentence is slipped into the passage. The model still detects the switch, both with the intervention and without it."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 77.305,
+          "end": 88.567,
+          "text": "The researchers repeated the comparison across eight passages. Explicit reports and questions about the language generally followed the swap. Continuation and anomaly detection barely moved."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 88.947,
+          "end": 97.747,
+          "text": "A language name can be visible in every readout and carry very different causal weight. This is why a useful reading of the lens always specifies the task."
+        }
+      ]
+    },
+    {
+      "duration": 105.686,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 9.655,
+          "text": "What could a researcher do with this window? During an audit, a term suggesting evaluation awareness can flag a moment worth checking against the model's behavior."
+        },
+        {
+          "sceneIndex": 0,
+          "start": 10.035,
+          "end": 22.404,
+          "text": "Instructions can also direct attention. While copying a sentence, a model asked to calculate silently showed intermediate numbers in its workspace. Each observation calls for a behavioral test."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 23.204,
+          "end": 31.667,
+          "text": "Could practicing an explanation change a later action? Researchers interrupted training examples with a question about the principles relevant to the task."
+        },
+        {
+          "sceneIndex": 1,
+          "start": 32.047,
+          "end": 42.069,
+          "text": "They trained Haiku 4.5 on the reflection alone. At evaluation the model continued its original task, with no question about principles and no reflection to write."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 42.869,
+          "end": 53.483,
+          "text": "On a fabrication benchmark, the mean dishonesty score fell from zero point two five to zero point zero seven. Lower scores indicate more honest reports."
+        },
+        {
+          "sceneIndex": 2,
+          "start": 53.863,
+          "end": 62.639,
+          "text": "On a second benchmark measuring deception, the mean fell from zero point three eight to zero point zero five. Both numbers are grader scores."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 63.439,
+          "end": 73.679,
+          "text": "After training, ethics-related terms became more prominent in the workspace. Researchers suppressed selected directions associated with them and repeated the evaluations."
+        },
+        {
+          "sceneIndex": 3,
+          "start": 74.059,
+          "end": 83.43,
+          "text": "The first trained score rose to zero point two two, close to its original level. The second rose to zero point two three, reversing part of the improvement."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 84.23,
+          "end": 95.414,
+          "text": "We have seen report, deliberate modulation, intermediate reasoning, cross-task reuse, and selective involvement. These are functional properties that a workspace account can put to the test."
+        },
+        {
+          "sceneIndex": 4,
+          "start": 95.794,
+          "end": 105.146,
+          "text": "Whether the model has a subjective experience remains open. What this study gives us is a way to connect an internal measurement to an observable change in behavior."
+        }
+      ]
+    }
+  ],
+  "zh": [
+    {
+      "duration": 93.855,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 7.35,
+          "text": "会织网的那种动物有几条腿？你大概已经想到了它的模样，然后才数起它的腿。"
+        },
+        {
+          "sceneIndex": 0,
+          "start": 7.73,
+          "end": 14.069,
+          "text": "模型把“八”排在答案首位。题目没有提到蜘蛛，回答里也只有一个数字。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 14.869,
+          "end": 25.852,
+          "text": "先停在给出答案之前。研究者观察模型在几个位置的内部数值，用一种叫作透镜的方法，在中间层读出了“蜘蛛”对应的英文词元。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 26.232,
+          "end": 36.131,
+          "text": "这是一条线索，但还有别的解释。模型可能表征了蜘蛛，答案却来自另一条路径，比如织网和数字八之间的直接关联。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 36.931,
+          "end": 44.454,
+          "text": "怎样判断哪条路径起了作用？把题目中的每个词都保留下来，只改变模型内部的活动。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 44.834,
+          "end": 52.206,
+          "text": "在选定的层里，交换“蜘蛛”和“蚂蚁”对应的激活坐标，再让计算继续。你猜，哪个数字会排在第一？"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 53.006,
+          "end": 61.885,
+          "text": "把两次结果放在一起。原始运行中第一名是八。交换坐标后，第一名变成六，恰好是蚂蚁的腿数。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 62.265,
+          "end": 71.889,
+          "text": "从辨认动物到报出腿数，这段计算发生了变化。两次用的是同一道题，比较结果，就能检验内部干预的影响。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 72.689,
+          "end": 82.381,
+          "text": "可以把实验分两遍看。第一遍看透镜读到了什么，第二遍看改动这个表征以后，答案是否朝事先预测的方向变化。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 82.761,
+          "end": 93.315,
+          "text": "两步合在一起，才有证据说明这个表征在这道题里起了因果作用。接下来，可以带着这两个问题，去认识模型里的工作空间。"
+        }
+      ]
+    },
+    {
+      "duration": 104.186,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 9.621,
+          "text": "在提示中选一个词元。模型在这个位置保留着一长串数字，数学上叫作向量。每一层都会读取并更新它。"
+        },
+        {
+          "sceneIndex": 0,
+          "start": 10.001,
+          "end": 20.821,
+          "text": "这个逐层变化的向量属于残差流。如果能把其中一层的向量转换成词表里的词元，研究者就更容易理解这层保留了哪些信息。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 21.621,
+          "end": 30.944,
+          "text": "一种叫作对数几率透镜的方法，直接把模型自己的输出读出方式应用到这个向量上。它在接近输出的层往往很好用。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 31.324,
+          "end": 41.209,
+          "text": "在更早的层里，同一个方向可能有不同的含义。把早期向量当作末层向量来解读，原来能辨认出的概念就可能变得模糊。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 42.009,
+          "end": 51.204,
+          "text": "雅可比透镜多加了一步转换。想象在这一层轻轻拨动向量的一个分量，再观察末层各个分量随之发生的细微变化。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 51.584,
+          "end": 61.452,
+          "text": "这些局部变化率组成一张矩阵。作者跨许多提示和位置取平均，也考虑后续位置，从而为每一层估计一张典型的转换矩阵。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 62.252,
+          "end": 72.794,
+          "text": "应用这张矩阵，再读出各词元的得分。一个词元排名靠前，意味着在多种上下文中，这个激活都有使模型更容易说出它的倾向。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 73.174,
+          "end": 81.846,
+          "text": "把词元位置固定，只改变层数。这样就可以跟着同一个候选概念，观察它在模型不同深度的读数如何变化。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 82.646,
+          "end": 93.06,
+          "text": "研究者用少数几个词元方向来近似激活，每个方向的权重都大于或等于零。拟合出来的这部分，就是雅可比空间分量。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 93.44,
+          "end": 103.646,
+          "text": "拟合以后，向量里还剩下大量信息。例如，有些概念需要好几个词元才能表达，基础版本的透镜就很难完整地捕捉它们。"
+        }
+      ]
+    },
+    {
+      "duration": 99.166,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 9.893,
+          "text": "来算一道题。四加十七，把和乘以二，最后再加七。你很可能已经算出了答案，先把中途用到的两个数也记下来。"
+        },
+        {
+          "sceneIndex": 0,
+          "start": 10.273,
+          "end": 20.64,
+          "text": "在这个实验里，模型只需补全算式。我们把观察位置固定在等号上，看看下一个词元出现以前，模型内部发生了什么。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 21.44,
+          "end": 29.923,
+          "text": "先看二十一，这是括号内的和。逐层向前移动，观察二十一在透镜读出的所有词元中排在什么位置。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 30.303,
+          "end": 38.964,
+          "text": "开始时，这三个数的读数都不突出。再往后，有一段时间它们的排名一同上升，随后二十一最先到达第一名。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 39.764,
+          "end": 48.691,
+          "text": "再跟着四十二走。把刚才的和乘以二，就会得到这个数。它比二十一晚了大约八层，才第一次升到首位。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 49.071,
+          "end": 58.359,
+          "text": "可以换一个数单独追踪，屏幕上的算式始终相同。留意曲线在哪里交叉，再比较同一层里三个数各自的排名。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 59.159,
+          "end": 68.843,
+          "text": "最后，把七加到四十二上，得到四十九。它直到接近输出时才排到第一。走过了这么多层，观察的位置仍然是同一个等号。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 69.223,
+          "end": 76.978,
+          "text": "这些读数来自一次前向计算。模型在写出答案的第一个数字之前，就可以对中间量进行处理。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 77.778,
+          "end": 88.587,
+          "text": "依次出现的峰值提供了线索。作者还把另一次运行中的激活替换进来，检验哪些层确实影响答案。这种方法叫作激活修补。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 88.967,
+          "end": 98.626,
+          "text": "这项独立检验也支持算式中的先后顺序。你可以任取图上的一点，用排名、层数和词元位置三个信息，把它准确地读出来。"
+        }
+      ]
+    },
+    {
+      "duration": 99.98,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 11.002,
+          "text": "蜘蛛的表征参与了一道题。要称得上工作空间，同一个表征还应该能被多种不同的操作调用。该用什么实验检验这一点？"
+        },
+        {
+          "sceneIndex": 0,
+          "start": 11.382,
+          "end": 21.053,
+          "text": "可以用一个国家作共同的输入。分别询问它的首都、主要语言和所在大洲。每一道题需要查询的事实都不同。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 21.853,
+          "end": 31.291,
+          "text": "从询问法国的问题开始，把工作空间中法国对应的坐标换成中国的坐标。无论问什么，施加的都是同一种替换。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 31.671,
+          "end": 40.483,
+          "text": "问到首都，答案从巴黎变成北京。问语言和大洲时，答案也随之改变，而每道题的文字里写的始终是法国。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 41.283,
+          "end": 51.917,
+          "text": "为了了解这种替换有多普遍，论文测试了国家、月份、动物和数词四类对象。每类有四种操作，每种操作测试十二对有方向的替换。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 52.297,
+          "end": 60.889,
+          "text": "这些组合一共是一百九十二次试验。只有与新对象相符合的答案上升到第一名，才把这次替换记为成功。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 61.689,
+          "end": 71.27,
+          "text": "用常规力度干预，成功的是七十六次。把替换力度加倍以后，同样的一百九十二次试验中，成功次数增至一百零一次。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 71.65,
+          "end": 80.125,
+          "text": "这里的力度，是指沿选定方向减去、加上的量有多大。题目和判断成功的标准，在两种条件下完全相同。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 80.925,
+          "end": 88.088,
+          "text": "也看看那些没有成功的替换。原来的概念在透镜读数里越突出，替换通常就越容易成功。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 88.468,
+          "end": 99.44,
+          "text": "同一项改动能被几种不同的计算读取，这就为信息广播提供了证据。成功与失败放在一起，也让我们看清这项结论的适用范围。"
+        }
+      ]
+    },
+    {
+      "duration": 108.173,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 11.483,
+          "text": "想象你正在读一段西班牙语。你能认出这是什么语言，但要继续读下去，必须先在心中说出它的名字吗？研究者设计了四种任务。"
+        },
+        {
+          "sceneIndex": 0,
+          "start": 11.863,
+          "end": 23.691,
+          "text": "每种任务中，透镜都能读到“西班牙语”。研究者在问题的词元位置交换西班牙语和法语的工作空间坐标。先猜猜，哪些答案会变？"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 24.491,
+          "end": 33.717,
+          "text": "先请模型说出这段文字使用的语言。原始运行里，它回答西班牙语。交换后，它说的是法语。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 34.097,
+          "end": 43.836,
+          "text": "这一问要模型报告的，正好就是研究者在内部动过的那项属性。直接给语言命名，是检验口头报告能力的一种方式。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 44.636,
+          "end": 54.98,
+          "text": "接着问，哪一位著名作家用这种语言写作？原始答案是加西亚·马尔克斯，交换工作空间坐标后，答案变成了维克多·雨果。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 55.36,
+          "end": 64.382,
+          "text": "文章里没有给出作家的姓名。要找出这样一位作家，模型可以把对语言的判断作为输入，再做一次人物检索。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 65.182,
+          "end": 73.211,
+          "text": "第三种任务是续写下一行。执行同样的替换以后，模型依然顺畅地用西班牙语写了下去。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 73.591,
+          "end": 83.201,
+          "text": "第四种任务里，研究者把一句法语夹进西班牙语段落中。无论是否执行替换，模型都能发现这里发生了语言切换。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 84.001,
+          "end": 95.401,
+          "text": "研究者总共比较了八段文字。直接报告和根据语言查找事实，往往跟随替换发生变化。续写和检测异常则几乎不受影响。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 95.781,
+          "end": 107.633,
+          "text": "同一个语言名称可以出现在每种任务的读数里，它对结果的因果作用却大不相同。所以，解读透镜时，始终要说清正在做哪项任务。"
+        }
+      ]
+    },
+    {
+      "duration": 115.344,
+      "cues": [
+        {
+          "sceneIndex": 0,
+          "start": 0.28,
+          "end": 12.157,
+          "text": "研究者能如何利用这扇窗口？审计模型时，如果出现与“正在被评估”有关的词，就可以把这个时刻标出来，和模型的实际行为交叉检查。"
+        },
+        {
+          "sceneIndex": 0,
+          "start": 12.537,
+          "end": 24.358,
+          "text": "指令也能调动这些表征。研究者让模型一边抄句子，一边默算，透镜读数里就出现了中间数值。每条这样的线索都值得进一步检验。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 25.158,
+          "end": 36.352,
+          "text": "练习解释原则，会改变模型以后采取的行动吗？研究者在训练样本的任务中途插入提问，让模型反思哪些原则适用于眼前情境。"
+        },
+        {
+          "sceneIndex": 1,
+          "start": 36.732,
+          "end": 48.678,
+          "text": "他们用这些样本训练 Haiku 4.5 模型，只在反思回答上计算损失。评估时模型接着完成原任务，过程中既没有原则提问，也无需写出反思。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 49.478,
+          "end": 58.836,
+          "text": "在考查是否坦白编造行为的任务上，平均不诚实得分从零点二五降到零点零七。分数越低，表示报告越诚实。"
+        },
+        {
+          "sceneIndex": 2,
+          "start": 59.216,
+          "end": 69.174,
+          "text": "在考查欺骗行为的另一项评估上，平均得分从零点三八降到零点零五。这两张图记录的都是评审模型给出的分数。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 69.974,
+          "end": 79.703,
+          "text": "训练后，与伦理反思有关的词在工作空间里变得更加突出。研究者抑制了选定的相关方向，然后重新进行评估。"
+        },
+        {
+          "sceneIndex": 3,
+          "start": 80.083,
+          "end": 90.508,
+          "text": "训练后的模型在第一项评估上回升到零点二二，接近训练前水平。第二项回升到零点二三，先前的改善有一部分被抵消。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 91.308,
+          "end": 103.301,
+          "text": "我们依次看到了报告概念、按指令调动、内部推理、跨任务复用，以及有选择地参与计算。这五项都是工作空间假说能接受实验检验的功能性质。"
+        },
+        {
+          "sceneIndex": 4,
+          "start": 103.681,
+          "end": 114.804,
+          "text": "模型是否有主观体验，仍是另一个有待回答的问题。这项研究给了我们一种办法，把内部测量同外部可观察到的行为变化联系起来。"
+        }
+      ]
+    }
+  ]
+}
