@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" class="english">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark"><meta name="theme-color" content="#09121c">
+<title>Orbit Atlas · Earth &amp; Moon</title>
+<link rel="stylesheet" href="src/course.css">
+</head>
+<body>
+<noscript><div class="noscript">请启用 JavaScript 观看内置影片和互动实验。 Enable JavaScript to use the films and experiments.</div></noscript>
+<a class="skip" href="#lesson" id="skip"></a>
+<header class="top"><div class="wrap topin">
+<a class="brand" href="#home" aria-label="Orbit Atlas"><svg viewBox="0 0 42 42" aria-hidden="true"><circle cx="21" cy="21" r="12" fill="none" stroke="#a8e6d1" stroke-width="1.2"/><ellipse cx="21" cy="21" rx="20" ry="6.1" transform="rotate(-32 21 21)" stroke="#edcc94" stroke-width="1.35" fill="none"/><circle cx="34.6" cy="12.1" r="2.3" fill="#f4d59a"/><circle cx="21" cy="21" r="2" fill="#bce1d3"/></svg><span><span id="brand"></span><small>ORBIT ATLAS</small></span></a>
+<nav class="topnav"><a href="#catalog" id="navCh"></a><a href="#lesson" id="navLab"></a></nav>
+<div class="language" id="langgroup" role="group"><button id="langZh" aria-pressed="false" lang="zh-CN">中文</button><button id="langEn" aria-pressed="true" lang="en">EN</button></div>
+</div></header>
+<main id="home">
+<section class="hero"><img class="heroImg" id="cover" alt=""><div class="wrap hero-inner">
+<div class="eyebrow" id="eyebrow"></div><h1 id="title"></h1><span class="sub" id="sub"></span><p class="hero-desc" id="heroDesc"></p><div class="hero-actions"><button class="btn primary" id="startFilm"></button><button class="btn glass" id="startLab"></button></div>
+</div></section>
+<section class="catalog" id="catalog"><div class="wrap"><div class="catalog-head"><h2 id="catalogTitle"></h2><div class="catalog-meta"><span class="totals" id="totals"></span><span class="arrows"><button class="mini" id="railPrev"></button><button class="mini" id="railNext"></button></span></div></div><div class="rail" id="rail"></div></div></section>
+<section class="wrap lesson" id="lesson"><div class="lessonhead"><div><div class="chapter-index" id="chapterIndex"></div><h2 id="lessonTitle"></h2><p class="question" id="question"></p></div><div class="seg modes" role="group" id="modegroup"><button id="filmMode"></button><button id="labMode"></button></div></div>
+<div id="stage" class="stage">
+<div class="panels"><div class="scope"><div class="scope-head"><span class="scopelabel"><i></i><span id="spaceLabel"></span></span><span class="scope-name" id="spaceName"></span></div><canvas width="688" height="400" id="space" class="mainCanvas" role="img"></canvas></div><div class="scope"><div class="scope-head"><span class="scopelabel"><i></i><span id="groundLabel"></span></span><span class="scope-name" id="groundName"></span></div><canvas width="400" height="400" id="ground" role="img"></canvas></div></div>
+<audio id="film" class="media-el" preload="metadata" aria-hidden="true"></audio><div id="mediaError" class="mediaerror" hidden></div>
+<div class="captionbox" id="capbox"><span class="capid">CC</span><div><p class="cap-primary" id="capPrimary"></p><p class="cap-alt" id="capAlt"></p></div></div>
+<div class="videoctrl" id="filmControls"><button id="filmPlay" class="iconbtn playbtn"></button><span class="time" id="filmTime">00:00 / 00:00</span><div class="vidrange"><input type="range" id="seek" min="0" max="1" step="0.05" value="0"></div><button class="iconbtn" id="mute"></button><label class="iclabel" id="captionWrap"><select id="captions"></select></label><label class="iclabel"><select id="speed"><option value="0.75">0.75×</option><option value="1" selected>1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option></select></label><button class="iconbtn" id="fs1"></button></div>
+<div id="labControls" class="labctrl" hidden><div class="labfirst"><button class="iconbtn playbtn" id="labPlay"></button><div class="labread"><div class="readlabels"><label id="axisName" for="axis"></label><output id="axisValue" for="axis"></output></div><input type="range" id="axis" min="0" max="1000" value="0" step="1"></div><div class="lab-actions"><button class="btn ghost smallbtn" id="camera"></button><button class="iconbtn" id="reset"></button><button class="iconbtn" id="fs2"></button></div></div><div class="lab-settings"><div id="presets" class="presets"></div><div id="options" class="optionset"></div></div></div>
+</div>
+<div class="below"><div class="exercise"><h3 class="kicker" id="challenge"></h3><p class="tasktext" id="tasktext"></p><div class="choices" id="choices"></div><p class="feedback" id="feedback" aria-live="polite"></p><button class="textbtn" id="tryLab"></button></div>
+<div class="transcript"><details id="transDetails"><summary class="summaryline"><span class="kicker" id="scriptTitle"></span><span class="chev" aria-hidden="true">⌄</span></summary><p class="help" id="scriptHelp"></p><ol id="scriptlist" class="scriptlist"></ol></details><p id="scriptClosedHelp" class="help"></p></div></div>
+<div class="nextrow"><button class="btn ghost" id="previous"></button><p class="meta-note" id="scaleNote"></p><button class="btn ghost" id="next"></button></div></section>
+</main><footer class="sources"><div class="wrap"><details id="sources"><summary class="summaryline"><span id="sourcesTitle"></span><span aria-hidden="true">⌄</span></summary><div class="sourcebody" id="sourceBody"></div></details></div></footer>
+<script src="src/scene.js"></script>
+<script type="module" src="src/start.js"></script>
+</body></html>

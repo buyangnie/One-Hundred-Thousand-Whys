@@ -1,0 +1,892 @@
+{
+  "chapters": [
+    {
+      "title": [
+        "地球自转与昼夜",
+        "Earth’s spin and the day"
+      ],
+      "short": [
+        "自转与昼夜",
+        "Day and night"
+      ],
+      "question": [
+        "站在杭州，为什么每天都能看到日出？",
+        "Why does the Sun rise each day in Hangzhou?"
+      ],
+      "summary": [
+        "跟随杭州穿过晨昏线，同时观察当地地平线上太阳的位置。",
+        "Follow Hangzhou across the day–night boundary and watch its local sky."
+      ],
+      "task": [
+        "把时间从清晨拖到正午。哪一刻太阳最高，竖杆的影子最短？",
+        "Scrub from dawn to noon. When is the Sun highest and a vertical pole’s shadow shortest?"
+      ],
+      "answer": [
+        "当地太阳正午，太阳在这一天升得最高，竖杆的影子最短。这里用当地太阳时读数。",
+        "At local solar noon the Sun reaches its daily high point, giving a vertical pole its shortest shadow. The clock shows local solar time."
+      ],
+      "choices": [
+        [
+          "日出时",
+          "At sunrise"
+        ],
+        [
+          "太阳正午",
+          "At solar noon"
+        ],
+        [
+          "日落时",
+          "At sunset"
+        ]
+      ],
+      "beats": [
+        {
+          "zh": "想象你站在杭州的湖边。天边刚刚变亮，地球上的你正在向哪里转？",
+          "en": "Imagine standing beside a lake in Hangzhou. As the sky brightens, which way is the ground beneath you turning?",
+          "a": 0.19,
+          "b": 0.222,
+          "v": 0
+        },
+        {
+          "zh": "看左边的金色标记，它就是杭州。此刻标记还在背对太阳的一侧。",
+          "en": "Find the gold marker on the globe. That is Hangzhou, still on the side that faces away from the Sun.",
+          "a": 0.222,
+          "b": 0.239,
+          "v": 0
+        },
+        {
+          "zh": "地球从西向东自转。标记穿过明暗交界线时，右边的太阳从东方升起。",
+          "en": "Earth spins from west to east. As the marker crosses the boundary into daylight, the Sun rises on the eastern horizon.",
+          "a": 0.239,
+          "b": 0.275,
+          "v": 0
+        },
+        {
+          "zh": "这条分隔昼夜的线叫晨昏线。太阳照亮约半个地球，城市随地球进入白天。",
+          "en": "The boundary between day and night is the terminator. Sunlight reaches about half of Earth at once, and our city turns into daylight.",
+          "a": 0.275,
+          "b": 0.355,
+          "v": 0
+        },
+        {
+          "zh": "找到连接南北两极的地轴。赤道在两极正中间，纬度是零度。",
+          "en": "Trace the axis connecting the North and South Poles. Halfway between the poles is the equator, at zero degrees latitude.",
+          "a": 0.355,
+          "b": 0.43,
+          "v": 0
+        },
+        {
+          "zh": "太阳在天上的东升西落，是地面观察者看到的视运动。试着想象把相机固定在地轴以外。",
+          "en": "The Sun's daily passage is an apparent motion seen from the ground. Imagine moving your camera off the spinning Earth and into space.",
+          "a": 0.43,
+          "b": 0.43,
+          "v": 0
+        },
+        {
+          "zh": "太阳升得越来越高。到当地太阳正午，它在今天的天空中达到最高点。",
+          "en": "The Sun climbs higher. At local solar noon it reaches the highest point of its path across today's sky.",
+          "a": 0.43,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "接着把时间往前推。下午阳光渐斜，杭州再次来到晨昏线，太阳从西方落下。",
+          "en": "Move forward through the afternoon. Sunlight arrives at a shallower angle, and Hangzhou crosses the boundary again at sunset in the west.",
+          "a": 0.5,
+          "b": 0.77,
+          "v": 0
+        },
+        {
+          "zh": "又一个正午大约要等二十四小时。这是一个平均太阳日，也是日常计时的依据。",
+          "en": "It takes about twenty-four hours on average to go from one solar noon to the next. This is a mean solar day.",
+          "a": 0.77,
+          "b": 0.96,
+          "v": 0
+        },
+        {
+          "zh": "如果盯住的是远方恒星，地球转一圈约二十三小时五十六分。地球也在公转，所以要再多转一点，太阳才会回到正午。",
+          "en": "Measured against distant stars, a spin takes about twenty-three hours and fifty-six minutes. As Earth also advances in its orbit, it must turn a little farther for the Sun to return to noon.",
+          "a": 0.96,
+          "b": 0.96,
+          "v": 0
+        },
+        {
+          "zh": "试着把标记停在日出的一刻。本章取春分附近的理想情况，时钟显示当地太阳时。",
+          "en": "Try stopping the marker at sunrise. This model uses ideal equinox geometry, and the clock reads local solar time.",
+          "a": 0.96,
+          "b": 1.25,
+          "v": 0
+        }
+      ],
+      "correct": 1,
+      "id": "day-and-night"
+    },
+    {
+      "title": [
+        "地球公转与四季",
+        "Earth’s orbit and the seasons"
+      ],
+      "short": [
+        "公转与四季",
+        "Orbit and seasons"
+      ],
+      "question": [
+        "六月同一天，为什么南北两地的白昼长短不同？",
+        "Why do the two hemispheres have different day lengths in June?"
+      ],
+      "summary": [
+        "让倾斜的地球沿轨道运行，对比南北纬 30° 的太阳高度和白昼时长。",
+        "Carry a tilted Earth around the Sun and compare the daylight and noon Sun at 30° north and south."
+      ],
+      "task": [
+        "选六月至，再把地轴倾角切换成 0°。两地的白昼时长会怎样？",
+        "Choose the June solstice, then set the axial tilt to 0°. What happens to the two day lengths?"
+      ],
+      "answer": [
+        "在这个圆轨道、零倾角模型中，两地全年都接近 12 小时白昼。恢复 23.4°，南北季节差异就回来了。",
+        "In this circular, zero-tilt model both sites receive about twelve hours of daylight year-round. Restore the tilt to bring back the seasonal contrast."
+      ],
+      "choices": [
+        [
+          "同时变长",
+          "Both grow longer"
+        ],
+        [
+          "差距变大",
+          "They diverge more"
+        ],
+        [
+          "都约 12 小时",
+          "Both are about 12 h"
+        ]
+      ],
+      "beats": [
+        {
+          "zh": "地球除了自转，还绕太阳公转。走完一圈大约是一年，也就是三百六十五天多一点。",
+          "en": "Earth spins and also orbits the Sun. One trip takes a year, a little over three hundred and sixty-five days.",
+          "a": 0,
+          "b": 0.07,
+          "v": 0
+        },
+        {
+          "zh": "盯住地球上的短轴线。地轴相对轨道面的垂线倾斜约二十三点四度。",
+          "en": "Follow the short line through Earth. Its axis tilts about twenty-three point four degrees away from the perpendicular to its orbital plane.",
+          "a": 0.07,
+          "b": 0.16,
+          "v": 0
+        },
+        {
+          "zh": "地球沿轨道前进，地轴在这一年里大致指向同一片星空。六月，北极一端倾向太阳。",
+          "en": "As Earth moves, the axis points toward nearly the same distant stars. By the June solstice the northern end leans toward the Sun.",
+          "a": 0.16,
+          "b": 0.25,
+          "v": 0
+        },
+        {
+          "zh": "比较右边两地。北纬三十度的正午太阳更高，又有更长的时间接收阳光。",
+          "en": "Compare the two observing sites. At thirty degrees north, the midday Sun stands higher and daylight lasts longer.",
+          "a": 0.25,
+          "b": 0.25,
+          "v": 0
+        },
+        {
+          "zh": "太阳升得高，同样一束光覆盖的地面面积较小，单位面积接收的能量更多。把它和白昼长短联系起来想。",
+          "en": "With a higher Sun, a beam of light is spread over a smaller patch of ground. Each unit of area gets more energy. Combine that effect with longer daylight.",
+          "a": 0.25,
+          "b": 0.25,
+          "v": 0
+        },
+        {
+          "zh": "南纬三十度则正好相反，太阳较低，白昼较短。同一时刻，两半球的季节相反。",
+          "en": "At thirty degrees south the midday Sun is lower and the days are shorter. The two hemispheres experience opposite seasons at the same time.",
+          "a": 0.25,
+          "b": 0.34,
+          "v": 0
+        },
+        {
+          "zh": "走到九月分点，阳光直射赤道。忽略大气折射，两地的昼夜都接近等长。",
+          "en": "At the September equinox, sunlight falls directly on the equator. Ignoring atmospheric refraction, day and night are nearly equal at both sites.",
+          "a": 0.34,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "再走四分之一圈。到了十二月至，南极一端倾向太阳，南纬三十度的白昼变长。",
+          "en": "Travel another quarter orbit. At the December solstice the southern end leans toward the Sun, giving the southern site longer days.",
+          "a": 0.5,
+          "b": 0.75,
+          "v": 0
+        },
+        {
+          "zh": "要检验离太阳远近的解释，看看同一天的两个半球。它们同在一个地球上，季节却正好相反。",
+          "en": "Test the idea that distance causes these seasons. Both hemispheres share essentially the same distance to the Sun on a given day, yet their seasons are opposite.",
+          "a": 0.75,
+          "b": 0.75,
+          "v": 0
+        },
+        {
+          "zh": "现在临时把地轴扶正。保持相同的圆轨道，两地的白昼就一起回到十二小时。",
+          "en": "Now straighten the axis. With the same circular orbit, both sites return to twelve hours of daylight.",
+          "a": 0.75,
+          "b": 0.78,
+          "v": 1
+        },
+        {
+          "zh": "恢复倾角再拖动一年。你可以分别追踪正午太阳高度和白昼时长，看它们一起变化。",
+          "en": "Restore the tilt and follow a year in the lab. Track both the noon Sun and the length of daylight as the seasons change.",
+          "a": 0.78,
+          "b": 1,
+          "v": 0
+        }
+      ],
+      "correct": 2,
+      "id": "seasons"
+    },
+    {
+      "title": [
+        "赤道与南北回归线",
+        "The equator and the tropics"
+      ],
+      "short": [
+        "赤道与回归线",
+        "Equator and tropics"
+      ],
+      "question": [
+        "地球仪为什么要在南北纬 23.4° 各画一条线？",
+        "Why are there special lines at 23.4° north and south?"
+      ],
+      "summary": [
+        "追踪太阳直射点的纬度，再从地面看一根竖杆的正午影子。",
+        "Track the latitude of the overhead Sun and watch a vertical pole’s noon shadow."
+      ],
+      "task": [
+        "把观测地点设为北回归线，再选六月至。此时竖杆的影长是多少？",
+        "Observe from the Tropic of Cancer at the June solstice. How long is the vertical pole’s shadow?"
+      ],
+      "answer": [
+        "在理想模型中影长为零。太阳在正头顶，竖杆的影子落在杆脚。",
+        "Its length is zero in this ideal model. The Sun is directly overhead, so the pole casts its shadow at its base."
+      ],
+      "choices": [
+        [
+          "约为零",
+          "About zero"
+        ],
+        [
+          "与杆等长",
+          "A full pole length"
+        ],
+        [
+          "全年最长",
+          "Longest of the year"
+        ]
+      ],
+      "beats": [
+        {
+          "zh": "在一块水平地面上竖起一根杆。如果太阳就在头顶，杆子的影子会落在哪里？",
+          "en": "Place a vertical pole on level ground. Where will its shadow fall if the Sun is directly overhead?",
+          "a": 0,
+          "b": 0,
+          "v": 0
+        },
+        {
+          "zh": "地球上，正午太阳恰好在头顶的地方，叫太阳直射点。金点追踪的是它的纬度。",
+          "en": "The subsolar point is the place where the noon Sun shines straight down. The gold dot tracks its latitude.",
+          "a": 0,
+          "b": 0.06,
+          "v": 0
+        },
+        {
+          "zh": "纬线与赤道平行。沿着同一条纬线向东或向西走，纬度始终一样，变化的是经度。",
+          "en": "Lines of latitude run parallel to the equator. Travel east or west along one and your latitude stays the same, even as your longitude changes.",
+          "a": 0.06,
+          "b": 0.06,
+          "v": 0
+        },
+        {
+          "zh": "三月分点时，直射点在赤道。随着地球公转，这个纬度开始向北移动。",
+          "en": "At the March equinox the subsolar point lies on the equator. As Earth moves along its orbit, this latitude shifts north.",
+          "a": 0.06,
+          "b": 0.16,
+          "v": 0
+        },
+        {
+          "zh": "六月至，它到达最北端，约北纬二十三点四度。这条纬线称为北回归线。",
+          "en": "At the June solstice it reaches its northern limit, about twenty-three point four degrees north. This is the Tropic of Cancer.",
+          "a": 0.16,
+          "b": 0.25,
+          "v": 0
+        },
+        {
+          "zh": "看右边，观测地点就在北回归线。太阳直射的这一刻，竖杆的影子收到了杆脚。",
+          "en": "Our observer is now on the Tropic of Cancer. When the Sun is directly overhead, the pole’s shadow shrinks to its base.",
+          "a": 0.25,
+          "b": 0.25,
+          "v": 1
+        },
+        {
+          "zh": "再沿着轨道前进，直射纬度折返向南。九月分点，它再次经过零度纬线。",
+          "en": "Continue around the orbit. The overhead Sun moves south and crosses the equator again at the September equinox.",
+          "a": 0.25,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "十二月至，它到达南回归线。换到南回归线观察，正午也能看见相同的零影长。",
+          "en": "In December it reaches the Tropic of Capricorn. An observer on that line now sees the same vanishing noon shadow.",
+          "a": 0.5,
+          "b": 0.75,
+          "v": 2
+        },
+        {
+          "zh": "两条回归线的纬度，来自地轴倾角。它们标出了太阳可以直射的最北和最南边界。",
+          "en": "The latitudes of the tropics come from Earth’s tilt. They mark the northern and southern limits of the overhead Sun.",
+          "a": 0.75,
+          "b": 0.88,
+          "v": 2
+        },
+        {
+          "zh": "赤道一年可经历两次太阳直射，回归线上大约一次。再向两极走，正午太阳就不会到达头顶。",
+          "en": "At the equator the Sun passes overhead twice a year, and on either tropic about once. Farther toward the poles, the noon Sun never reaches the zenith.",
+          "a": 0.88,
+          "b": 0.88,
+          "v": 2
+        },
+        {
+          "zh": "在互动实验里，换三个不同的纬度，比较同一季节的正午太阳高度和杆影。",
+          "en": "In the lab, switch among the three marked latitudes. Compare the noon Sun and the pole’s shadow at the same time of year.",
+          "a": 0.88,
+          "b": 1,
+          "v": 0
+        }
+      ],
+      "correct": 0,
+      "id": "tropics"
+    },
+    {
+      "title": [
+        "月球公转与同步自转",
+        "The Moon’s synchronized spin"
+      ],
+      "short": [
+        "月球同步自转",
+        "The Moon’s spin"
+      ],
+      "question": [
+        "月球明明在转，为什么地球上总看到大致相同的一面？",
+        "If the Moon spins, why do we see nearly the same face?"
+      ],
+      "summary": [
+        "认准金色月面标记，在固定星空与地球两个参照系之间比较。",
+        "Track one gold surface marker from two perspectives: the fixed stars and Earth."
+      ],
+      "task": [
+        "在起点关闭月球自转，再拖到半圈。从地球还能看见标记吗？",
+        "Switch off the Moon’s spin at the start, then move half an orbit. Can Earth still see the marker?"
+      ],
+      "answer": [
+        "此时标记转到背向地球的一侧。恢复同步自转，标记在绕行中一直朝向地球。",
+        "The marker now faces away from Earth. Restore synchronous rotation and the marker stays pointed toward Earth all around the orbit."
+      ],
+      "choices": [
+        [
+          "仍在正中央",
+          "Still in the center"
+        ],
+        [
+          "转到背面了",
+          "It faces away"
+        ],
+        [
+          "出现在月缘",
+          "At the limb"
+        ]
+      ],
+      "beats": [
+        {
+          "zh": "挑一个月面地标来做实验。我们用金色圆环标出它，并把月面补亮，方便跟踪。",
+          "en": "Pick a landmark on the Moon. We mark it in gold and use even lighting so you can follow it throughout this experiment.",
+          "a": 0,
+          "b": 0.02,
+          "v": 0
+        },
+        {
+          "zh": "左边从固定星空俯看月球绕地球，右边是在地球上看到的月面。先记住圆环的位置。",
+          "en": "On the left, watch the orbit against the fixed stars. On the right is the view from Earth. Notice where the circle starts.",
+          "a": 0.02,
+          "b": 0.12,
+          "v": 0
+        },
+        {
+          "zh": "月球公转四分之一圈，同时绕自身转过九十度。标记的朝向随它一起改变。",
+          "en": "The Moon travels through a quarter orbit and turns ninety degrees on its own axis. Its marked face changes direction in space.",
+          "a": 0.12,
+          "b": 0.25,
+          "v": 0
+        },
+        {
+          "zh": "再走到半圈，对照固定的星空，标记已经朝向相反的一边，却仍然对着地球。",
+          "en": "After half an orbit the marker points the opposite way relative to the stars, yet it still faces Earth.",
+          "a": 0.25,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "你也可以绕着一把椅子走，并始终面对椅背。走完一圈，你相对房间也恰好转了一圈。",
+          "en": "Try walking around a chair while always facing its back. After one circuit you have also turned all the way around relative to the room.",
+          "a": 0.5,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "相对于恒星，自转一周和公转一周都约二十七点三天。这种配合叫同步自转。",
+          "en": "Relative to the stars, both one spin and one orbit take about twenty-seven point three days. This is synchronous rotation.",
+          "a": 0.5,
+          "b": 1,
+          "v": 0
+        },
+        {
+          "zh": "从起点重做实验。这一次临时关闭自转，让月球的朝向相对星空保持不变。",
+          "en": "Start the experiment again, this time with spin switched off. The marked face now keeps a fixed direction relative to distant stars.",
+          "a": 0,
+          "b": 0.12,
+          "v": 1
+        },
+        {
+          "zh": "仍然绕着地球走。经过半圈时，地球上的观察者看到另一面，金色标记消失了。",
+          "en": "Keep the orbit moving. Halfway around, an observer on Earth sees the opposite face and the gold marker disappears.",
+          "a": 0.12,
+          "b": 0.5,
+          "v": 1
+        },
+        {
+          "zh": "重新开启同步自转，金环又能持续朝向地球。比较这两次实验，就能分清自转和公转。",
+          "en": "Restore synchronous rotation and the landmark stays facing Earth. Compare these two runs to separate spin from orbital motion.",
+          "a": 0.5,
+          "b": 0.79,
+          "v": 0
+        },
+        {
+          "zh": "朝向地球的一面称为近面，背向我们的一面称为远面。远面也有白天，阳光会照到它。",
+          "en": "The side facing Earth is the near side, and the other is the far side. The far side also has daylight when it faces the Sun.",
+          "a": 0.79,
+          "b": 0.79,
+          "v": 0
+        },
+        {
+          "zh": "真实月球的视角还有轻微摇摆，叫天平动。这个模型先保留最主要的同步关系。",
+          "en": "The real Moon also appears to rock slightly, an effect called libration. Here we isolate its main, synchronized motion.",
+          "a": 0.79,
+          "b": 1,
+          "v": 0
+        }
+      ],
+      "correct": 1,
+      "id": "synchronous-rotation"
+    },
+    {
+      "title": [
+        "月相与朔望月",
+        "Moon phases and the lunar month"
+      ],
+      "short": [
+        "月相变化",
+        "Lunar phases"
+      ],
+      "question": [
+        "总是同一个月球，为什么一会儿像弯钩，一会儿又像圆盘？",
+        "Why does the same Moon change from a thin crescent to a full disk?"
+      ],
+      "summary": [
+        "从太空看受光半球，从地球看其中可见的部分。",
+        "Compare the sunlit half in space with the part of that half visible from Earth."
+      ],
+      "task": [
+        "已知太阳照亮大约半个月球。上弦月时，从地球看，月面亮了多少？",
+        "Sunlight illuminates about half the lunar globe. At first quarter, how much of the disk seen from Earth is bright?"
+      ],
+      "answer": [
+        "可见圆盘的一半发亮。“上弦”对应月相周期的四分之一；可见亮面比例是二分之一。",
+        "Half the visible disk is lit. First quarter marks one quarter of the phase cycle, while one half of the apparent disk is bright."
+      ],
+      "choices": [
+        [
+          "四分之一",
+          "One quarter"
+        ],
+        [
+          "几乎全部",
+          "Almost all"
+        ],
+        [
+          "二分之一",
+          "One half"
+        ]
+      ],
+      "beats": [
+        {
+          "zh": "回到真实的太阳照明。月球反射阳光，通常总有约半个球面被太阳照亮。",
+          "en": "Return to sunlight. The Moon shines by reflected light, and about half its globe normally faces the Sun.",
+          "a": 0,
+          "b": 0.015,
+          "v": 0
+        },
+        {
+          "zh": "新月时，月球位于地球朝向太阳的一侧。受光面大多背对我们，圆盘几乎看不见。",
+          "en": "At new Moon, the Moon lies on the Sun-facing side of Earth. The lit half faces mostly away from us and the disk is hard to see.",
+          "a": 0.015,
+          "b": 0.033,
+          "v": 0
+        },
+        {
+          "zh": "随着月球向前运行，我们开始看到一弯亮边。空间位置与地面所见对应起来了。",
+          "en": "As the Moon moves on, a thin bright crescent comes into view. Connect its position in space with what the observer sees.",
+          "a": 0.033,
+          "b": 0.15,
+          "v": 0
+        },
+        {
+          "zh": "到了上弦月，月相周期走过四分之一。从地球看，月面圆盘正好有一半明亮。",
+          "en": "At first quarter, one quarter of the phase cycle has passed. From Earth, half of the apparent disk is now bright.",
+          "a": 0.15,
+          "b": 0.25,
+          "v": 0
+        },
+        {
+          "zh": "想一想，另外半个圆盘为什么暗？从左图看，地球并没有挡住它的阳光，我们只是看见了部分月夜。",
+          "en": "Why is the rest of the disk dark? Earth is not blocking its sunlight in this view. Part of the visible lunar surface is simply experiencing night.",
+          "a": 0.25,
+          "b": 0.25,
+          "v": 0
+        },
+        {
+          "zh": "继续到满月，月球位于地球背向太阳的一侧，我们几乎能看到整个受光的半球。",
+          "en": "Continue to full Moon. The Moon is on the side of Earth away from the Sun, so we can see almost the whole illuminated hemisphere.",
+          "a": 0.25,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "此时如果从月球近面回望地球，地球的受光面几乎背向月球。两个观察地点的亮面恰好互补。",
+          "en": "Now imagine looking back at Earth from the lunar near side. The sunlit half of Earth faces mostly away from the Moon. The two phases complement each other.",
+          "a": 0.5,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "接下来，明亮的部分开始缩小。到下弦月，又剩半个圆盘，但亮边已换到另一侧。",
+          "en": "The bright portion now decreases. At third quarter half the disk is lit again, with the bright side opposite to first quarter.",
+          "a": 0.5,
+          "b": 0.75,
+          "v": 0
+        },
+        {
+          "zh": "这里统一把月面北方画在上面。真实夜空中的月牙会转过一个角度，取决于观察地点和时间。",
+          "en": "Here lunar north is up. The crescent can appear rotated in your own sky, depending on your location and the time of observation.",
+          "a": 0.75,
+          "b": 0.865,
+          "v": 0
+        },
+        {
+          "zh": "从新月到下一次新月，平均约二十九点五天，称为一个朔望月。",
+          "en": "From one new Moon to the next takes about twenty-nine and a half days on average. This is the synodic month.",
+          "a": 0.865,
+          "b": 1,
+          "v": 0
+        },
+        {
+          "zh": "它比恒星月稍长，因为地球也在绕太阳前进。月球要再多走一段，才恢复相同的日地月夹角。",
+          "en": "This takes longer than an orbit relative to the stars. Earth also moves around the Sun, so the Moon must travel farther to recover the same Sun–Earth–Moon geometry.",
+          "a": 1,
+          "b": 1,
+          "v": 0
+        }
+      ],
+      "correct": 2,
+      "id": "moon-phases"
+    },
+    {
+      "title": [
+        "日食、月食与轨道交点",
+        "Eclipses and orbital nodes"
+      ],
+      "short": [
+        "日食与月食",
+        "Solar and lunar eclipses"
+      ],
+      "question": [
+        "新月和满月每月都有，为什么日食和月食不每月都发生？",
+        "Why don’t eclipses happen at every new or full Moon?"
+      ],
+      "summary": [
+        "比较两种阴影的去向，再把新月或满月移近和移离轨道交点。",
+        "Trace two different shadows, then compare an alignment near a node with one far from it."
+      ],
+      "task": [
+        "选择满月、交点附近，把时间拖到最接近时。谁进入了谁的影子？",
+        "Choose full Moon near a node and move to closest alignment. Which body enters which shadow?"
+      ],
+      "answer": [
+        "地球挡住射向月球的阳光，月球进入地球本影，地球夜半球上能看到月食。",
+        "Earth blocks sunlight from reaching the Moon. The Moon enters Earth’s umbra, and observers on Earth’s night side can see a lunar eclipse."
+      ],
+      "choices": [
+        [
+          "月球进入地影",
+          "Moon in Earth’s shadow"
+        ],
+        [
+          "地球进入月影",
+          "Earth in the Moon’s shadow"
+        ],
+        [
+          "太阳进入月影",
+          "Sun in the Moon’s shadow"
+        ]
+      ],
+      "beats": [
+        {
+          "zh": "先看新月附近。太阳、月球和地球若排得足够直，月球就会遮住地面观察者眼中的太阳。",
+          "en": "Start near new Moon. When Sun, Moon and Earth line up closely enough, the Moon can cover the Sun in an observer’s sky.",
+          "a": 0.04,
+          "b": 0.32,
+          "v": 0
+        },
+        {
+          "zh": "月影落在地球上。处于半影的观察者看到日偏食，本影扫过的狭窄区域可见日全食。",
+          "en": "The Moon casts a shadow on Earth. Observers in the penumbra see a partial eclipse, while people in the narrow umbra can see a total solar eclipse.",
+          "a": 0.32,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "右边模拟位于全食带的观察者。食甚时明亮的日面被盖住，外围日冕显现出来。",
+          "en": "The right view places us in the path of totality. At maximum eclipse the bright solar disk is covered and the outer corona becomes visible.",
+          "a": 0.5,
+          "b": 0.5,
+          "v": 0
+        },
+        {
+          "zh": "换到满月附近，这次地球在中间。太阳光被地球挡住，月球走进地球的影子。",
+          "en": "Switch to full Moon. Now Earth is in the middle. It blocks sunlight and the Moon moves into Earth’s shadow.",
+          "a": 0.03,
+          "b": 0.37,
+          "v": 1
+        },
+        {
+          "zh": "日食时，是否看见全食取决于你站在哪里。月食时，只要月球在当地地平线上方，天气合适，就有机会看到。",
+          "en": "For a solar eclipse, your location determines whether you see totality. A lunar eclipse is visible much more widely, wherever the Moon is above the horizon and skies are clear.",
+          "a": 0.37,
+          "b": 0.37,
+          "v": 1
+        },
+        {
+          "zh": "当月面全部进入本影，就发生月全食。穿过地球大气后折射过去的红光，能让月面呈现暗红色。",
+          "en": "When the whole Moon enters the umbra, the lunar eclipse is total. Red light bent through Earth’s atmosphere can give the Moon a dim copper color.",
+          "a": 0.37,
+          "b": 0.5,
+          "v": 1
+        },
+        {
+          "zh": "为什么这种对齐这么难？月球轨道面相对地球公转轨道面倾斜约五点一度。",
+          "en": "Why is this alignment uncommon? The Moon's orbital plane is tilted by about five point one degrees relative to the plane of Earth's orbit.",
+          "a": 0.5,
+          "b": 0.52,
+          "v": 1
+        },
+        {
+          "zh": "两平面相交，月球穿过地球轨道面的位置叫交点。把新月移离交点，月影会掠过地球旁边。",
+          "en": "The Moon crosses Earth's orbital plane at two nodes. Move the new Moon away from a node and its shadow sweeps past Earth.",
+          "a": 0.16,
+          "b": 0.5,
+          "v": 2
+        },
+        {
+          "zh": "满月也一样。离交点较远时，月球从地球本影上方或下方经过，仍然是一轮明亮的满月。",
+          "en": "The same test works at full Moon. Far from a node, the Moon passes above or below the umbra and stays bright.",
+          "a": 0.27,
+          "b": 0.64,
+          "v": 3
+        },
+        {
+          "zh": "把俯视想象成把两条轨道压在一张纸上，它会隐藏高低的差别。所以判断有无食，还要从侧面检查。",
+          "en": "Imagine flattening both orbits onto a sheet of paper. A top view hides their difference in height, so use a side view to check whether the shadows really meet.",
+          "a": 0.64,
+          "b": 0.64,
+          "v": 3
+        },
+        {
+          "zh": "在实验台对比四种组合。先辨认谁在中间，再检查是否靠近交点，就能判断阴影落在哪里。",
+          "en": "Try all four combinations in the lab. Identify the body in the middle, then check the node alignment to predict where the shadow falls.",
+          "a": 0.22,
+          "b": 0.5,
+          "v": 1
+        }
+      ],
+      "correct": 0,
+      "id": "eclipses"
+    }
+  ],
+  "secondsPerCue": {
+    "en": [
+      [
+        7.452834467120182,
+        6.257233560090703,
+        7.758185941043084,
+        8.108571428571429,
+        8.121632653061225,
+        7.999047619047619,
+        6.746530612244898,
+        8.67968253968254,
+        6.786167800453515,
+        12.129297052154195,
+        8.247392290249433
+      ],
+      [
+        7.843219954648526,
+        8.17546485260771,
+        8.294603174603175,
+        7.537596371882086,
+        9.882993197278912,
+        8.265804988662131,
+        10.291972789115647,
+        8.141179138321995,
+        9.520680272108844,
+        7.249750566893424,
+        7.03546485260771
+      ],
+      [
+        7.080680272108843,
+        7.018095238095238,
+        9.865260770975057,
+        8.101723356009071,
+        7.748163265306123,
+        8.174875283446712,
+        7.094285714285714,
+        7.117868480725623,
+        6.674331065759637,
+        9.18344671201814,
+        7.609115646258504
+      ],
+      [
+        7.420544217687075,
+        8.070022675736961,
+        8.15092970521542,
+        6.44249433106576,
+        8.518458049886622,
+        8.236825396825397,
+        8.659455782312925,
+        7.558185941043084,
+        7.98140589569161,
+        8.190884353741497,
+        8.436371882086167
+      ],
+      [
+        7.8172789115646255,
+        8.13437641723356,
+        7.640226757369614,
+        7.215192743764172,
+        9.117006802721088,
+        8.376281179138322,
+        9.329977324263039,
+        7.476598639455783,
+        8.046848072562359,
+        6.633061224489796,
+        10.345215419501134
+      ],
+      [
+        8.300907029478457,
+        9.289115646258503,
+        8.686349206349206,
+        6.869297052154195,
+        10.983673469387755,
+        8.606213151927438,
+        8.651519274376417,
+        7.715238095238095,
+        7.180090702947846,
+        9.814784580498866,
+        8.474331065759637
+      ]
+    ],
+    "zh": [
+      [
+        7.00766439909297,
+        6.099591836734694,
+        7.237006802721089,
+        7.169160997732426,
+        6.36421768707483,
+        8.510430839002268,
+        7.680816326530612,
+        7.60421768707483,
+        7.948934240362812,
+        10.317460317460318,
+        8.48702947845805
+      ],
+      [
+        8.322947845804988,
+        6.79156462585034,
+        8.235102040816326,
+        7.50312925170068,
+        9.806394557823129,
+        7.483537414965986,
+        6.885079365079365,
+        7.000544217687075,
+        8.882403628117913,
+        7.546575963718821,
+        8.090975056689343
+      ],
+      [
+        7.824807256235828,
+        8.033741496598639,
+        8.588344671201813,
+        6.814739229024943,
+        6.749387755102041,
+        7.276961451247166,
+        6.877278911564626,
+        8.154965986394558,
+        7.825442176870748,
+        8.738412698412699,
+        6.800090702947846
+      ],
+      [
+        7.835827664399093,
+        8.106167800453514,
+        7.208390022675737,
+        7.10108843537415,
+        8.37936507936508,
+        7.358866213151927,
+        7.582131519274377,
+        7.617959183673469,
+        8.104126984126983,
+        8.50140589569161,
+        8.047891156462585
+      ],
+      [
+        7.699319727891156,
+        8.040136054421769,
+        7.844716553287982,
+        7.4996825396825395,
+        9.74390022675737,
+        7.42702947845805,
+        9.430249433106576,
+        7.364126984126984,
+        8.600589569160999,
+        6.481451247165533,
+        8.798639455782313
+      ],
+      [
+        8.514739229024944,
+        7.88281179138322,
+        7.906122448979592,
+        7.31718820861678,
+        9.500544217687075,
+        8.698548752834467,
+        7.65922902494331,
+        8.276553287981859,
+        9.033786848072562,
+        9.752789115646259,
+        8.894013605442177
+      ]
+    ]
+  }
+}
