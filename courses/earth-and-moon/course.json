@@ -1,0 +1,129 @@
+{
+  "id": "earth-and-moon",
+  "version": "1.0.0",
+  "defaultLanguage": "en",
+  "languages": [
+    "en",
+    "zh"
+  ],
+  "title": {
+    "en": "Earth & Moon",
+    "zh": "地球与月球"
+  },
+  "description": {
+    "en": "Follow a sunrise in Hangzhou, trace the seasons and watch two worlds cast shadows. Six narrated experiments connect the view from space with the sky from Earth.",
+    "zh": "从杭州的日出到月影划过地球，用六个有声实验连接太空与地面视角。"
+  },
+  "subjects": [
+    "Astronomy",
+    "Earth Science"
+  ],
+  "tags": [
+    "rotation",
+    "orbit",
+    "seasons",
+    "moon phases",
+    "eclipses",
+    "自转",
+    "公转",
+    "四季",
+    "月相",
+    "日食",
+    "月食"
+  ],
+  "cover": "cover.webp",
+  "entry": "index.html",
+  "release": "https://github.com/buyangnie/One-Hundred-Thousand-Whys/releases/download/earth-and-moon-v1.0.0/Orbit_Atlas_Earth_and_Moon.html",
+  "chapters": [
+    {
+      "id": "day-and-night",
+      "title": {
+        "en": "Earth’s spin and the day",
+        "zh": "地球自转与昼夜"
+      },
+      "question": {
+        "en": "Why does the Sun rise each day in Hangzhou?",
+        "zh": "站在杭州，为什么每天都能看到日出？"
+      },
+      "aliases": [
+        "为什么有昼夜",
+        "Why do we have day and night?"
+      ]
+    },
+    {
+      "id": "seasons",
+      "title": {
+        "en": "Earth’s orbit and the seasons",
+        "zh": "地球公转与四季"
+      },
+      "question": {
+        "en": "Why do the two hemispheres have different day lengths in June?",
+        "zh": "六月同一天，为什么南北两地的白昼长短不同？"
+      },
+      "aliases": [
+        "为什么有四季",
+        "Why are there seasons?"
+      ]
+    },
+    {
+      "id": "tropics",
+      "title": {
+        "en": "The equator and the tropics",
+        "zh": "赤道与南北回归线"
+      },
+      "question": {
+        "en": "Why are there special lines at 23.4° north and south?",
+        "zh": "地球仪为什么要在南北纬 23.4° 各画一条线？"
+      },
+      "aliases": [
+        "为什么有南北回归线",
+        "Why do the tropics exist?"
+      ]
+    },
+    {
+      "id": "synchronous-rotation",
+      "title": {
+        "en": "The Moon’s synchronized spin",
+        "zh": "月球公转与同步自转"
+      },
+      "question": {
+        "en": "If the Moon spins, why do we see nearly the same face?",
+        "zh": "月球明明在转，为什么地球上总看到大致相同的一面？"
+      },
+      "aliases": [
+        "为什么月球总是一面对着地球",
+        "Why do we see the same side of the Moon?"
+      ]
+    },
+    {
+      "id": "moon-phases",
+      "title": {
+        "en": "Moon phases and the lunar month",
+        "zh": "月相与朔望月"
+      },
+      "question": {
+        "en": "Why does the same Moon change from a thin crescent to a full disk?",
+        "zh": "总是同一个月球，为什么一会儿像弯钩，一会儿又像圆盘？"
+      },
+      "aliases": [
+        "为什么月亮有圆缺",
+        "Why does the Moon change shape?"
+      ]
+    },
+    {
+      "id": "eclipses",
+      "title": {
+        "en": "Eclipses and orbital nodes",
+        "zh": "日食、月食与轨道交点"
+      },
+      "question": {
+        "en": "Why don’t eclipses happen at every new or full Moon?",
+        "zh": "新月和满月每月都有，为什么日食和月食不每月都发生？"
+      },
+      "aliases": [
+        "为什么不是每个月都有日食和月食",
+        "Why are eclipses rare?"
+      ]
+    }
+  ]
+}
