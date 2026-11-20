@@ -1,0 +1,36 @@
+name: Publish the verified Earth & Moon offline edition
+on:
+  push:
+    branches: [publish-earth-and-moon-v1]
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GH_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+    steps:
+      - name: Verify and publish the original course
+        shell: bash
+        run: |
+          set -euo pipefail
+          file=Orbit_Atlas_Earth_and_Moon.html
+          tag=earth-and-moon-v1.0.0
+          for part in dfdd58b1be0dfb9e933ad6d760ffa3dc07d53d2d fee2e8afe393253dccc7ae516bba9e782caff51d 9094d1b7e56510681e0f789032b6bfecda7e0a16 00eeecd8dded1dfafdfd2253b903c749a156a4a9 195971a766f5468794690e1d859251ee3bdbeb99 f64fca7788bd0fdbbce9226f013bdac7675b2db2 18565a6b88ac4d6e7b17bb3391242104ed3b0c8a 730f9662596ef995e1579cdd99fd72fa92853a91 9fb0a13d861aa8ae8926d658eb7c1b09e665b6a9 31b74016d1563ed5e519d34a013e59eca4d71d4e 3d49c31bcefa37e02c0fc4f2c00977d6b9519dfc 1416b6f393dbb93fe2f98ebf1a96975d9f8e0f62; do
+            gh api "repos/$GH_REPO/git/blobs/$part" --jq .content | base64 --decode >> offline.html.gz
+          done
+          gzip --decompress --stdout offline.html.gz > "$file"
+          echo "6a71546bf78fdef8ba52552f9be1a39a009c361869721056699ee94dfaf43302  $file" | sha256sum --check
+          test "$(wc -c < "$file")" -eq 39485467
+          cat > notes.md <<'NOTES'
+          Six narrated astronomy chapters connect a space view with an observer on Earth. Both English and Mandarin include narration, captions, a transcript, and interactive experiments. The course opens in English.
+
+          **Offline use** — download the HTML attachment below and open it in your browser. All twelve narrated films are embedded.
+
+          [Open the online course](https://buyangnie.github.io/One-Hundred-Thousand-Whys/courses/earth-and-moon/)
+
+          SHA-256 of the HTML: `6a71546bf78fdef8ba52552f9be1a39a009c361869721056699ee94dfaf43302`
+          NOTES
+          gh release create "$tag" "$file" --target 434a99aa3161d9c359e8240c8a6b7c0a40745dab --title "Earth & Moon 1.0.0" --notes-file notes.md
